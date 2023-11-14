@@ -6,7 +6,7 @@ class Dec2Hex
     public static int Arg1;
 
     public static void main(String args[])
-    {
+    { System.out.println("HELLO JENKINS");
       // Check for user input
        if (args.length < 1 ) {
        // Print error message and exit the programme if no input argument is provided 
