@@ -36,8 +36,16 @@ private int capturedExitCode;
 
     @Test
     public void testConversionWithNoInputArgument() {
-        
+    String[] args = {};
+    try {
+    Dec2Hex.main(args);
+    fail("Expected System.exit(1) for missing input argument");
+    } catch (SecurityException e) { 
+    assertEquals("System.exit() is not allowed", e.getMessage());
+    assertEquals(1, capturedExitCode);                
    }
+    }
+
     @Test
     public void testConversionWithNoInputArgument() {
   }
