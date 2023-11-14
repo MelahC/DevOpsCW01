@@ -7,6 +7,8 @@ import java.io.PrintStream;
 
 public class Dec2HexTest {
 private String capturedOutput;
+//Variable to capture the exit codes 0 & 1 
+private int capturedExitCode;
 
     @Before
     public void setUp() {
@@ -31,4 +33,11 @@ private String capturedOutput;
         assertTrue(actualOutput.contains("F"));
         assertEquals(expectedOutput, actualOutput);
     }
-}
+
+    @Test
+    public void testConversionWithNoInputArgument() {
+        
+   }
+    @Test
+    public void testConversionWithNoInputArgument() {
+  }
