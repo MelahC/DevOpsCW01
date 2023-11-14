@@ -47,5 +47,14 @@ private int capturedExitCode;
     }
 
     @Test
-    public void testConversionWithNoInputArgument() {
-  }
+    public void testConversionWithNonIntegerInput() {
+    String[] args = {"abc"};
+    try {
+    Dec2Hex.main(args);
+    fail("Expected System.exit(0) for non-integer input");
+    } catch (SecurityException e) {
+    assertEquals("System.exit() is not allowed", e.getMessage());
+     assertEquals(0, capturedExitCode);
+    }
+     }
+
