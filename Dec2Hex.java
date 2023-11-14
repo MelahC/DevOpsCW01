@@ -7,6 +7,13 @@ class Dec2Hex
 
     public static void main(String args[])
     {
+      // Check for user input
+       if (args.length < 1 ) {
+       // Print error message and exit the programme if no input argument is provided 
+       System.out.println("Please provide valid input");
+       //Exit the program with error code (meaning encountered problem could not complete inteded operation)
+        System.exit(1);
+     }
         Arg1 = Integer.parseInt(args[0]);
         char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
         int rem, num;
@@ -20,7 +27,7 @@ class Dec2Hex
             hexadecimal= ch[rem] + hexadecimal;
             num= num/16;
         }
-        System.out.println("Testing Jenkins");
+       
         System.out.println("Hexadecimal representation is: " + hexadecimal);
 
     }
